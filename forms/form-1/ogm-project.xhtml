@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html version="-//W3C//DTD XHTML 1.1//EN" xsi:schemaLocation="http://www.w3.org/1999/xhtml http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd" xml:lang="en" lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:src="htx-scheme-id://org.groupware-systems.20190227T133048Z/meta-pattern/pattern-template.20200511T001800Z" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<!-- This file was created by form_generator_1.xsl of pattern-template-form-generator, which is free software licensed under the GNU Affero General Public License 3 or any later version (see https://gitlab.com/skreutzer/pattern-template-form-generator/). -->
+<!--
+Copyright (C) 2018-2020 Stephan Kreutzer
+
+This file is part of pattern-template-form-generator.
+
+pattern-template-form-generator is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License version 3 or any later version,
+as published by the Free Software Foundation.
+
+pattern-template-form-generator is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License 3 for more details.
+
+You should have received a copy of the GNU Affero General Public License 3
+along with pattern-template-form-generator. If not, see <http://www.gnu.org/licenses/>.
+-->
+<title>Open Global Mind: Project Entry</title><meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport"/><script type="text/javascript">
+          "use strict";
+
+          function save()
+          {
+              let xml = "&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;&lt;ogm-project xmlns=\"htx-scheme-id://com.openglobalmind.20140426T190412Z/projects.20200819T214500Z\"&gt;&lt;name&gt;" + document.getElementById('name').value.replace(/&amp;/g, '&amp;amp;').replace(/&gt;/g, '&lt;').replace(/&lt;/g, '&amp;gt;').replace(/"/g, '&amp;quot;').replace(/'/g, '&amp;apos;') /* Browsers and JavaScript, dumbest shit on earth! */ + "&lt;/name&gt;&lt;who&gt;" + document.getElementById('who').value.replace(/&amp;/g, '&amp;amp;').replace(/&gt;/g, '&lt;').replace(/&lt;/g, '&amp;gt;').replace(/"/g, '&amp;quot;').replace(/'/g, '&amp;apos;') /* Browsers and JavaScript, dumbest shit on earth! */ + "&lt;/who&gt;&lt;purpose&gt;" + document.getElementById('purpose').value.replace(/&amp;/g, '&amp;amp;').replace(/&gt;/g, '&lt;').replace(/&lt;/g, '&amp;gt;').replace(/"/g, '&amp;quot;').replace(/'/g, '&amp;apos;') /* Browsers and JavaScript, dumbest shit on earth! */ + "&lt;/purpose&gt;&lt;time-horizon&gt;" + document.getElementById('time-horizon').value.replace(/&amp;/g, '&amp;amp;').replace(/&gt;/g, '&lt;').replace(/&lt;/g, '&amp;gt;').replace(/"/g, '&amp;quot;').replace(/'/g, '&amp;apos;') /* Browsers and JavaScript, dumbest shit on earth! */ + "&lt;/time-horizon&gt;&lt;how-to-join&gt;" + document.getElementById('how-to-join').value.replace(/&amp;/g, '&amp;amp;').replace(/&gt;/g, '&lt;').replace(/&lt;/g, '&amp;gt;').replace(/"/g, '&amp;quot;').replace(/'/g, '&amp;apos;') /* Browsers and JavaScript, dumbest shit on earth! */ + "&lt;/how-to-join&gt;&lt;/ogm-project&gt;";
+              const blob = new Blob([xml], { "type": "application/xml" });
+              const blobUrl = window.URL.createObjectURL(blob);
+              //window.location.href = blobUrl;
+              window.open(blobUrl, '');
+
+              /*
+              // Might hit some length limit.
+              const blob = "data:application/xml;charset=utf-8," + encodeURIComponent(xml);
+              window.open(blob, '');
+              //window.location.href = blob;
+              */
+          }
+
+          window.onload = function() {
+              document.getElementById("template_form").onsubmit = function (event) {
+                  event.preventDefault();
+
+                  save();
+              }
+          };
+</script></head><body><div><h1>Open Global Mind: Project Entry</h1><form id="template_form" action="#" method="post"><fieldset class="table"><div><div><label for="name">Name of Project/Problem/Thing?</label></div><div><textarea type="text" name="name" id="name"/></div></div><div><div><label for="who">Who is playing?</label></div><div><textarea type="text" name="who" id="who"/></div></div><div><div><label for="purpose">Purpose: The purpose of this thing is to (do what/make/enable/etc) so that (who) can (do what)… and we will know we are making progress on this thing/project/problem when…</label></div><div><textarea type="text" name="purpose" id="purpose"/></div></div><div><div><label for="time-horizon">Time Horizon?</label></div><div><textarea type="text" name="time-horizon" id="time-horizon"/></div></div><div><div><label for="how-to-join">How to join?</label></div><div><textarea type="text" name="how-to-join" id="how-to-join"/></div></div><input type="submit" value="save"/></fieldset></form></div></body></html>
